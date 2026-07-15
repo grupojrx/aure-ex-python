@@ -1,6 +1,6 @@
 [project]
 name = "aure-ex"
-version = "0.1.0"
+version = "0.1.2"
 description = "SDK oficial da API AureEX para Python (tipado via OpenAPI)"
 readme = "README.md"
 requires-python = ">=3.10"
