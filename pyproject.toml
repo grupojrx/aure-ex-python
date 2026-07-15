@@ -1,0 +1,28 @@
+[project]
+name = "aure-ex"
+version = "0.1.0"
+description = "SDK oficial da API AureEX para Python (tipado via OpenAPI)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AureEX" }]
+keywords = ["aureex", "aure-ex", "crypto", "payments", "sdk", "openapi"]
+dependencies = [
+  "urllib3>=2.0.0",
+  "python-dateutil>=2.8.0",
+  "pydantic>=2.0.0",
+  "typing-extensions>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://api.aure-ex.com/docs/sdks"
+Documentation = "https://api.aure-ex.com/docs"
+Repository = "https://github.com/grupojrx/aure-ex-python"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aure_ex*"]
