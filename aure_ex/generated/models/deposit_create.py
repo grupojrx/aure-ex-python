@@ -31,7 +31,7 @@ class DepositCreate(BaseModel):
     """ # noqa: E501
     method: StrictStr
     amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Valor em USDT, com até 6 casas decimais (ex.: 2500.123456). Mínimo de 10 USDT. Se o comprador enviar outro valor, o depósito é creditado pelo valor recebido. ")
-    network: Optional[StrictStr] = Field(default=None, description="Rede USDT. `matic` é aceito como alias de `pol`. ETH, BSC e POL usam o mesmo endereço.")
+    network: Optional[StrictStr] = Field(default=None, description="Rede USDT. `matic` é aceito como alias de `pol`. ETH, BSC e POL usam o mesmo endereço; envio por outra dessas três redes é creditado e o `network` do depósito passa a ser a rede real. ")
     expiration: Optional[datetime] = Field(default=None, description="Expiração do depósito (ISO 8601). Aceita de 10 minutos a 24 horas a partir da criação; valores fora da faixa são ajustados. Sem o campo, expira em 24 horas. ")
     reference: StrictStr
     callback_url: Optional[StrictStr] = Field(default=None, alias="callbackUrl")
